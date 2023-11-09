@@ -1,0 +1,18 @@
+{% extends 'index.html' %}
+
+{% load static %}
+
+{% block title %} Detail {% endblock title %}
+
+{% block body %}
+    
+   <div class="container mt-5">
+    <form method="post">{% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" class="btn btn-success" value="Create"/>
+        <input type="reset" class="btn btn-danger" value="Reset"/>
+   </form>
+   
+   </div>
+
+{% endblock body %}

@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+
+{% load static %}
+
+{% block title %} Detail {% endblock title %}
+
+{% block body %}
+    
+    <div class="card m-5" style="width: 18rem;">
+        <img src="{% static 'img/img2.jpg' %}" class="card-img-top" alt="Rasm">
+        <div class="card-body">
+          <h5 class="card-title">{{ student.sname}} {{ student.name }}</h5><br>
+          <h7 class="card-text">Email: {{ student.Email }}</h7><br>
+          <h7 class="card-text">Phone number: {{ student.phone }}</h7>
+          <br>
+          <a href="{% url 'update' student.pk %}" class="btn btn-warning">Update</a>
+          <a href="{% url 'delete' student.pk %}" class="btn btn-danger">Delete</a>
+        </div>
+      </div>
+   
+
+{% endblock body %}
